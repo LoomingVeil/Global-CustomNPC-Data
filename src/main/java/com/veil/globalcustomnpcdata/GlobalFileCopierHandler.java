@@ -10,6 +10,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.SaveHandler;
 import net.minecraftforge.event.world.WorldEvent;
+import noppes.npcs.CustomNpcs;
 import noppes.npcs.client.controllers.ClientCloneController;
 import noppes.npcs.controllers.*;
 
@@ -61,11 +62,12 @@ public class GlobalFileCopierHandler {
                     ScriptController.Instance.loadPlayerScripts();
                     ScriptController.Instance.loadForgeScripts();
                     ScriptController.Instance.loadStoredData();
+                    new SpawnController();
                     FactionController.getInstance().load();
                     MagicController.getInstance().load();
                     RecipeController.Instance.load();
                 } catch (IOException e) {
-                    System.out.println("An error occuoured while trying to copy global CustomNpc files!");
+                    System.out.println("An error occurred while trying to copy global CustomNpc files!");
                     e.printStackTrace();
                 }
             }
