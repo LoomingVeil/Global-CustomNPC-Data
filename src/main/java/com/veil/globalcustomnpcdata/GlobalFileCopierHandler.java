@@ -55,8 +55,8 @@ public class GlobalFileCopierHandler {
                     AnimationController.Instance.load();
                     // ClientCloneController.Instance.???
                     DialogController.Instance.load();
-                    // LinkedNpcController.Instance.???
-                    // PlayerDataController.Instance.??? Probably not necessary anyway
+                    new LinkedNpcController();
+                    new PlayerDataController();
                     QuestController.Instance.load();
                     ScriptController.Instance.loadCategories();
                     ScriptController.Instance.loadPlayerScripts();
